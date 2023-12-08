@@ -1,0 +1,137 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Estilos para el elemento body */
+body {
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el elemento */
+  background-position: center; /* Centra la imagen de fondo */
+  text-align: center; /* Alinea el texto en el centro */
+}
+
+/* Estilos para los elementos h1 y h2 */
+h1,
+h2 {
+  color: rgb(250, 250, 0); /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra del texto */
+  margin-bottom: 10px; /* Margen inferior */
+  font-weight: bold; /* Peso de la fuente */
+  font-size: 40px; /* Tamaño de la fuente */
+}
+
+h2 {
+  font-size: 28px; /* Tamaño de la fuente específico para h2 */
+}
+
+/* Estilos para el elemento p */
+p {
+  color: rgb(246, 246, 246); /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra del texto */
+  margin-bottom: 10px; /* Margen inferior */
+  font-style: italic; /* Estilo de fuente cursiva */
+  width: 50%; /* Ancho del elemento */
+  margin-left: auto; /* Margen izquierdo automático */
+  margin-right: auto; /* Margen derecho automático */
+  font-size: 20px; /* Tamaño de la fuente */
+  margin-top: 3%; /* Margen superior */
+  text-align: justify; /* Alineación justificada del texto */
+}
+
+/* Estilos para el elemento button */
+button {
+  background: rgb(15, 14, 14); /* Fondo del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border: none; /* Sin borde */
+  padding: 16px 32px; /* Relleno interno */
+  color: #fff; /* Color del texto */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Peso de la fuente */
+  position: relative; /* Posición relativa */
+  border-radius: 12px; /* Borde redondeado */
+  margin-top: 30%; /* Margen superior */
+}
+
+/* Estilos para el pseudoelemento ::before del botón */
+button::before {
+  content: ""; /* Contenido vacío */
+  position: absolute; /* Posición absoluta */
+  top: 0; /* Posicionamiento superior */
+  left: 0; /* Posicionamiento izquierdo */
+  z-index: -1; /* Índice z para ubicar el pseudoelemento detrás del botón */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  background: linear-gradient(
+    45deg,
+    red, blue, deeppink, rgb(250, 250, 0),
+    red, blue, deeppink, rgb(250, 250, 0)
+  ); /* Gradiente lineal de colores */
+  background-size: 800%; /* Tamaño del fondo del gradiente */
+  border-radius: 10px; /* Borde redondeado */
+  filter: blur(8px); /* Efecto de desenfoque */
+  animation: glowing 20s linear infinite; /* Animación para el efecto brillante */
+}
+
+/* Animación para el efecto brillante */
+@keyframes glowing {
+  0% {
+    background-position: 0 0; /* Posición inicial del fondo */
+  }
+  50% {
+    background-position: 350% 0; /* Posición intermedia del fondo */
+  }
+  100% {
+    background-position: 0 0; /* Posición final del fondo */
+  }
+}
+
+/* Estilos para el elemento con clase img_efec */
+.img_efec {
+  position: absolute; /* Posición absoluta */
+  top: 0; /* Posicionamiento superior */
+  left: 0; /* Posicionamiento izquierdo */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  z-index: -2; /* Índice z para ubicar el elemento detrás de otros elementos */
+}
+
+/* Estilos para la imagen dentro del elemento img_efec */
+.img_efec img {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Ajuste de la imagen al tamaño del contenedor */
+  animation: mov 4.5s ease-out infinite; /* Animación para el efecto de movimiento */
+}
+
+/* Animación para el efecto de movimiento */
+@keyframes mov {
+  0% {
+    transform: scale(1); /* Escala inicial */
+  }
+  25% {
+    transform: scale(1.05); /* Escala intermedia */
+  }
+  50% {
+    transform: scale(1); /* Escala intermedia */
+  }
+  75% {
+    transform: scale(1.05); /* Escala intermedia */
+  }
+  100% {
+    transform: scale(1); /* Escala final */
+  }
+}
+
+/* Estilos para el elemento con clase container */
+.container {
+  display: flex; /* Contenedor de tipo flex */
+  flex-direction: column; /* Dirección de apilamiento de elementos en columna */
+  justify-content: center; /* Alineación vertical centrada */
+  align-items: center; /* Alineación horizontal centrada */
+  height: 100vh; /* Altura igual a la altura de la ventana */
+  position: relative; /* Posición relativa */
+}

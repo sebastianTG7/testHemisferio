@@ -1,0 +1,51 @@
+body {
+  background-color: #00eeff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.n_preguntas {
+  width: 700px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#alternativas {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0026ff;
+}
+
+button:disabled {
+  background-color: #0004ff;
+  cursor: not-allowed;
+}
+
+#rectaHemisferio img {
+  width:600px;
+  height: 200px;
+}
